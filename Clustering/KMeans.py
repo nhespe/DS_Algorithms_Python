@@ -7,6 +7,7 @@ import numpy as np
 import math
 import collections
 
+random.seed(45)
 
 class KMeansClassifier:
 	def __init__(self, k, m_iter=50):
@@ -17,14 +18,12 @@ class KMeansClassifier:
 		""" given a chunk of data first we classify/fit all points """
 		initialization_function = self._validate_init_method(init_method.lower())
 		cluster_locs = initialization_function(self.k, data)
-		print("starting locations", cluster_locs)
+		# print("starting locations", cluster_locs)
 
 		for itr in range(self.m_iter):
 			assigned_clusters = [self._get_cluster(point, cluster_locs) for point in data]
-			print(assigned_clusters)
 
 			reassigned_cluster_centriods = self._get_cluster_centriods(assigned_clusters, data)
-			print(reassigned_cluster_centriods)
 
 			if all([np.array_equal(x,y) for x,y in zip(reassigned_cluster_centriods, cluster_locs)]):
 				print(f"Exit Criterion Met, Exiting at Iter: {itr}")
@@ -86,7 +85,9 @@ y = iris.target
 classifier = KMeansClassifier(len(collections.Counter(y)))
 classifier.fit(x, "random")
 
-print(y)
-print([[x,y] for x,y in zip(classifier.fit_data, y)])
+# Labels
+print(list(y))
+# Predicted
+print(classifier.fit_data)
 
 
