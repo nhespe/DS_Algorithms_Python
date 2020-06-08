@@ -2,7 +2,7 @@
 import numpy as np
 import random
 
-INTERS = 100
+ITERS = 100
 LEARNING_RATE = 0.0001
 
 x = [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]]
@@ -17,7 +17,7 @@ class LinearReg_Trained:
 	def fit_model(self, data, labels):
 		self.betas = np.asarray([random.randint(0,5)/5.0 for i in range(data.shape[1])]).reshape(-1, 1)
 		self.trained = True
-		for i in range(INTERS):
+		for i in range(ITERS):
 			y = np.dot(data, self.betas)
 			errors = (labels - y)/len(y) # get avg error
 
