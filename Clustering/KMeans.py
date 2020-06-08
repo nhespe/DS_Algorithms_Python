@@ -8,7 +8,7 @@ import math
 import collections
 
 random.seed(45)
-
+ 
 class KMeansClassifier:
 	def __init__(self, k, m_iter=50):
 		self.k = k
