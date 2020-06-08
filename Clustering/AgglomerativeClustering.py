@@ -9,7 +9,7 @@ import numpy as np
 from typing import List
 from copy import deepcopy
 """ Agglomerative Clustering method """
-
+ 
 
 class Cluster:
     def __init__(self, id, centroid, values=[]):
