@@ -9,7 +9,7 @@ class Gaussian:
 		self.mean = mean
 		self.var = var
 
-	def get_mean(self, data):
+	def get_mean(self, data): 
 		self.mean = sum(data)/len(data)
 
 	def get_var(self, data):
