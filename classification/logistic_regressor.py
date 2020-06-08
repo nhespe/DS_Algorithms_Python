@@ -6,7 +6,7 @@ import math
 from matplotlib import pyplot as plt
 
 INTERS = 100000
-LEARNING_RATE = 0.001
+LEARNING_RATE = 0.001 
 
 x = [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]]
 y = [[1], [1], [1], [0], [0]]
