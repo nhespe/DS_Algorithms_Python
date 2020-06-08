@@ -4,7 +4,7 @@ from collections import Counter
 
 import numpy as np
 
-class NaiveBayes:
+class NaiveBayes: 
 	def __init__(self, smooth=False):
 		self.smooth = smooth
 
