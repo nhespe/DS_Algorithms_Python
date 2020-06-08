@@ -4,7 +4,7 @@ import numpy as np
 
 from collections import Counter
 
-from sklearn import datasets
+from sklearn import datasets 
 
 class KNN_Classifier:
 	def __init__(self, k):
