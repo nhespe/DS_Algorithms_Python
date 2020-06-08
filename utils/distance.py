@@ -6,4 +6,4 @@ def euclidean(point_a, point_b):
 
 DISTANCE_FUNCTIONS = {
 	"euclidean" : euclidean
-}
+} 
