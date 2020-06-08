@@ -7,7 +7,7 @@ LEARNING_RATE = 0.0001
 
 x = [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]]
 y = [[1], [2], [3], [4], [5]]
-
+ 
 class LinearReg_Trained:
 	def __init__(self):
 		self.n = None
